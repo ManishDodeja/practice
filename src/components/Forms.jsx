@@ -9,6 +9,7 @@ export default class Forms extends Component {
             currentEmail: '',
             currentPassword: ''
         }
+        //this.handleEmail=this.handleEmail.bind(this)
     }
     addData = (e) => {
         let obj = {'email': this.state.currentEmail, 'password': this.state.currentPassword}
@@ -17,7 +18,7 @@ export default class Forms extends Component {
 
     }
     
-    handleEmail = (e)=>{
+    handleEmail= (e)=>{
         this.setState({currentEmail: e.target.value});
     }
     handlePassword = (e)=>{
@@ -28,13 +29,14 @@ export default class Forms extends Component {
             <div>
                 <h1>CRUD APPLICATION</h1>
                         <label>Email address</label>
-                        <input type="email" value={this.state.currentEmail} onChange={this.handleEmail} placeholder="Enter email" />
+                        <input type='email' value={this.state.currentEmail} onChange={this.handleEmail} placeholder="Enter email" />
                            
                         <label>Password</label>
-                        <input type="text" value={this.state.currentPassword} onChange={this.handlePassword} placeholder="Password" />
+                        <input type='password' value={this.state.currentPassword} onChange={this.handlePassword} placeholder="Password" />
                         <br />
                 
                     <button className="btn btn-primary" onClick={this.addData}>Add</button>
+                    <br/>
                     {/* <button className="btn btn-primary" onClick={this.gotoNextPage}>Show Data</button> */}
                     <Link to={'/showpage'}>Show Data</Link>
             </div>

@@ -1,8 +1,8 @@
 
 import { BrowserRouter as Router, Routes, Route, Form } from 'react-router-dom';
-import Forms from './CRUD/Forms';
-import Showdata from './CRUD/Showdata'
-import { useEffect, useState } from 'react';
+import Forms from './components/Forms'
+import Showdata from './components/Showdata';
+import {useState } from 'react';
 
 function App() {
   const [array, setArray] = useState([]);
